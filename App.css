@@ -1,0 +1,117 @@
+/* --------------------------------------------------------------------------------------------------------------- */
+@import url("https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap");
+
+.navigation-two {
+  height: 70px;
+  width: 400px;
+  background-color: #ffff;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  position: relative;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+.navigation-two ul {
+  display: flex;
+  list-style: none;
+  width: 350px;
+}
+
+.navigation-two ul li {
+  position: relative;
+  list-style: none;
+  width: 70px;
+  height: 70px;
+  z-index: 1;
+}
+
+.navigation-two ul li a {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  width: 100%;
+  text-align: center;
+  font-weight: 600;
+}
+
+.icon-two {
+  padding: 20px 0;
+  position: relative;
+  display: block;
+  transition: 0.5s;
+}
+
+.navigation-two ul li.active-two .icon-two {
+  transform: translateY(-35px);
+}
+
+.text-two {
+  position: absolute;
+  color: black;
+  font-weight: 400;
+  font-size: 0.75em;
+  letter-spacing: 0.05em;
+  transition: 0.5s;
+  transform: translateY(20px) translateX(-30px);
+  opacity: 0;
+}
+
+.navigation-two ul li.active-two .text-two {
+  opacity: 1;
+  transform: translateX(0px) translateY(20px);
+}
+
+.indicator-two {
+  position: absolute;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  top: -50%;
+  border: 6px solid #011013;
+  transition: 0.5s;
+}
+
+.navigation-two ul li:nth-child(1).active-two ~ .indicator-two {
+  transform: translateX(calc(70px * 0));
+  background-color: #d2b48c;
+}
+.navigation-two ul li:nth-child(2).active-two ~ .indicator-two {
+  transform: translateX(calc(70px * 1));
+  background-color: #99ccff;
+}
+.navigation-two ul li:nth-child(3).active-two ~ .indicator-two {
+  transform: translateX(calc(70px * 2));
+  background-color: #95d572;
+}
+.navigation-two ul li:nth-child(4).active-two ~ .indicator-two {
+  transform: translateX(calc(70px * 3));
+  background-color: #999999;
+}
+.navigation-two ul li:nth-child(5).active-two ~ .indicator-two {
+  transform: translateX(calc(70px * 4));
+  background-color: #1769bc;
+}
+/* --------------------------------------------------------------------------------------------------------------- */
+
+html,
+body,
+.container {
+  height: 100%;
+  width: 100%;
+  background-color: #011013;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Josefin Sans", sans-serif;
+}
